@@ -10,5 +10,6 @@ from datetime import datetime
 def factura(request):
     """"Return a greeting. """
     now = datetime.now().strftime('%m/%d/%Y, %H:%M:%S')
+    now2 = datetime.now()
     productos = Detalle_Factura.objects.all()        
-    return render(request, "facturas/facturas.html", {'now': now})
+    return render(request, "facturas/facturas.html", {'now2': now2})
