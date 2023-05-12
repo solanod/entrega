@@ -1,14 +1,14 @@
 from django.contrib import admin
 from productos.models import Producto, Devolucion
+from import_export.admin import ImportExportModelAdmin
 
-class AdminProducto(admin.ModelAdmin):
-    list_display = ["nombre"]
+class AdminProducto(ImportExportModelAdmin, admin.ModelAdmin):    
+    list_display = ["nombre", "imagen", "cantidad"]
     search_fields = ["nombre"]
     class Meta:
-        model = Producto
+        model = Producto    
 
-
-class AdminDevolucion(admin.ModelAdmin):
+class AdminDevolucion(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = ["id_devolucion"]
     search_fields = ["id_devolucion"]
     class Meta:

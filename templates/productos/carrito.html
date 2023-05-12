@@ -13,7 +13,9 @@
       </thead>
       <tbody>
       {% if request.session.carrito.items %}
-      {% for key, value in request.session.carrito.items %}
+      {% for key, value in request.session.carrito.items %}      
+      <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'factura' %}">
+        {% csrf_token %}
         <tr>
           <td>{{value.nombre}}</td>
           <td>${{value.valor}}</td>
@@ -22,12 +24,12 @@
             <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
             <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
           </td>
-        </tr>
+        </tr>        
       {% endfor %}
       {% else %}
       <tr>
           <td colspan="4">
-              <div class="alert alert-danger text-center"> Sin Productos </div>
+              <div class="alert alert-danger text-center"> Sin Productos </div>              
           </td>
       </tr>
       {% endif %}
@@ -41,5 +43,10 @@
     </div>
     <div class="row text-center">
         <div class="col-6"><a href="{% url 'CLS' %}" class="btn btn-danger">Limpiar</a></div>
-        <div class="col-6"><a href="{% url 'factura' %}" class="btn btn-success">Guardar</a></div>
+        {% if request.session.carrito.items %}
+        <div class="col-6"><a href="{% url 'factura' %}" class="btn btn-success" >Solicitar</a></div>
+    </form>
+        {% else %}
+        <div class="col-6"><a href="{% url 'factura' %}" class="btn btn-success disabled" >Solicitar</a></div>
+        {% endif %}
     </div>

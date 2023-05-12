@@ -36,7 +36,7 @@ class email(TemplateView, FormView):
                 'Mensaje enviado por {} <{}>:\n\n{}'.format(
                     nombre, email, message),
                 email,
-                [email, 'cjsd06301978@gmail.com'],
+                ['milimo1230@gmail.com'],
                 fail_silently=False,
             )
             try:
