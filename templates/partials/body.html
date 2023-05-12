@@ -21,8 +21,8 @@
               </a>
               <ul class="nav">
                 <li class="nav-item"><a href="{% url 'inicio' %}" class="nav-link active" aria-current="page"><i class="fa-solid fa-home"></i> Inicio</a></li>
-                <li class="nav-item"><a href="{% url 'Tienda' %}" class="nav-link"><i class="fa-solid fa-tachograph-digital"></i> Catalogo</a></li>        
-                <li class="nav-item"><a href="{% url 'correo' %}" class="nav-link"><i class="fa-solid fa-person-chalkboard"></i> Contactenos</a></li>
+                <li class="nav-item"><a href="{% url 'Tienda' %}" class="nav-link"><i class="fa-solid fa-tachograph-digital"></i> Catálogo</a></li>        
+                <li class="nav-item"><a href="{% url 'correo' %}" class="nav-link"><i class="fa-solid fa-person-chalkboard"></i> Contáctenos</a></li>
                 <li class="nav-item"><a href="{% url 'Somos' %}" class="nav-link"><i class="fa-solid fa-book"></i> Sobre Nosotos</a></li>
                 {% if user.is_authenticated %}
                 <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>                  
@@ -44,13 +44,14 @@
 <footer class="py-5">
   <div class="row">
   <div class="col-6 col-md-2 mb-3">
-  <h5>Sección</h5>
+  <h5>Enlaces</h5>
   <ul class="nav flex-column">
   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inicio</a></li>
-  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Características</a></li>
-  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Precios</a></li>
+  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Catálogo</a></li>
+  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Somos</a></li>
   </ul>
   </div>
+  
   <div class="col-6 col-md-2 mb-3">
   <h5>Sección</h5>
   <ul class="nav flex-column">
@@ -60,11 +61,11 @@
   </ul>
   </div>
   <div class="col-6 col-md-2 mb-3">
-  <h5>Sección</h5>
+  <h5>Ayuda</h5>
   <ul class="nav flex-column">
-  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inicio</a></li>
-  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Características</a></li>
-  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Precios</a></li>  
+  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contáctenos</a></li>
+  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nosotros</a></li>
+  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>  
   </ul>
   </div>
   <div class="col-md-5 offset-md-1 mb-3">
@@ -83,7 +84,7 @@
   <p>© 2022 Company, ASOARTE STORE, Inc. Reservados todos los derechos.</p>
   <ul class="list-unstyled d-flex">
   <li class="ms-3"><a class="link-dark" href="#"><i class="fa fa-twitter" aria-hidden="true"></i><use xlink:href="#twitter"></use></svg></a></li>
-  <li class="ms-3"><a class="link-dark" href="http://www.w3.org/2000/svg"><i class="fa fa-instagram" aria-hidden="true"></i><use xlink:href="#instagram"></use></svg></a></li>
+  <li class="ms-3"><a class="link-dark" href="https://instagram.com/asoarte_aso?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram" aria-hidden="true"></i><use xlink:href="#instagram"></use></svg></a></li>
   <li class="ms-3"><a class="link-dark" href="#"><i class="fa fa-facebook"></i><use xlink:href="#facebook"></use></svg></a></li>
   </ul>
   </div>  
