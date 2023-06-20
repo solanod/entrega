@@ -23,10 +23,11 @@ from usuarios.views import somos
 urlpatterns = [
     path('', inicio, name="inicio"),
     path('somos/', somos, name="Somos"),
-    path('admin/', admin.site.urls),
+    path('administrador/', admin.site.urls),
     path('usuarios/',include('usuarios.urls')),
     path('facturas/',include('facturas.urls')),
     path('productos/',include('productos.urls')),
+    
 ]
 
 if settings.DEBUG:

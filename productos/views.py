@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from productos.models import Producto
 from productos.carrito import Carrito
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 @login_required
 def listar_producutos(request):
