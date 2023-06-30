@@ -1,3 +1,6 @@
 db.sqlite3
+<<<<<<< HEAD
 env/
 base/settings.py
+=======
+>>>>>>> 73489b2e4902319f16fb2bbd75177635c145a2b1

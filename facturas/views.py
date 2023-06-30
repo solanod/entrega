@@ -1,5 +1,14 @@
 from django.shortcuts import render, redirect
 from facturas.models import Detalle_Factura
+from django.contrib.auth.decorators import login_required
+from productos.carrito import Carrito
+from productos.models import Producto
+
+
+
+# Utilities
+from datetime import datetime
+
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.views.generic import View
 from django.contrib import messages
@@ -10,7 +19,8 @@ from datetime import datetime
 
 @login_required
 def factura(request):
-    """"Return a greeting. """
+    prostop = Producto.objects.all()
+    carrito = Carrito(request)
     now = datetime.now().strftime('%m/%d/%Y, %H:%M:%S')
     now2 = datetime.now()
     productos = Detalle_Factura.objects.all()        
